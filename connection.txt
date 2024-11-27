@@ -1,0 +1,27 @@
+1. Arduino to MG996R Servo Motors
+
+Pan Servo:
+Signal (Orange): Connect to Digital Pin 9 on the Arduino.
+Power (Red): Connect to +V of an external power supply (e.g., 5V-6V battery or adapter).
+Ground (Brown): Connect to GND of the Arduino and the external power supply.
+Tilt Servo:
+Signal (Orange): Connect to Digital Pin 10 on the Arduino.
+Power (Red): Connect to +V of the external power supply (same source as the pan servo).
+Ground (Brown): Connect to GND of the Arduino and the external power supply.
+2. Camera Module
+
+ESP32-CAM or USB Camera:
+If using an ESP32-CAM:
+Follow its specific power and data requirements.
+Connect to a host device for OpenCV processing over WiFi or USB.
+If using a USB Camera:
+Connect it to your PC/laptop directly via USB for image processing.
+3. Power Supply
+
+Ensure that the external power supply provides sufficient current for both servos (at least 2A, preferably 5-6V).
+Common ground between the Arduino and the external power supply is essential for proper operation.
+4. Additional Notes
+
+GND Connection: All ground connections (Arduino, servos, power supply) must be tied together.
+Decoupling Capacitors: Add a 470µF capacitor across the servo power supply to smooth out voltage fluctuations caused by servo movements.
+USB Power: Power the Arduino Uno via its USB port (connected to the PC/laptop running the Python code).
